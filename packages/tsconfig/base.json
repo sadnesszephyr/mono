@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Default",
+  "compilerOptions": {
+	"incremental": true,
+	"target": "ESNext",
+	"module": "CommonJS",
+	"sourceMap": true,
+	"outDir": "./dist",
+	"rootDir": "./src",
+	"removeComments": true,
+
+	"strict": true,
+	"noImplicitAny": true,
+	"strictNullChecks": true,
+	"strictFunctionTypes": true,
+	"strictBindCallApply": true,
+	"strictPropertyInitialization": true,
+	"noImplicitThis": true,
+	"alwaysStrict": true,
+	"skipLibCheck": true,
+
+	"resolveJsonModule": true,
+	"esModuleInterop": true,
+	"experimentalDecorators": true,
+	"emitDecoratorMetadata": true,
+    "composite": false,
+    "declaration": true,
+    "declarationMap": true,
+    "forceConsistentCasingInFileNames": true,
+    "inlineSources": false,
+    "isolatedModules": true,
+    "moduleResolution": "node",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "preserveWatchOutput": true
+  },
+  "exclude": ["node_modules"]
+}

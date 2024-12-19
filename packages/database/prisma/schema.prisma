@@ -1,0 +1,32 @@
+datasource database {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+model Guild {
+    id       BigInt        @id
+    members  GuildMember[]
+    language String        @default("en")
+    modules  Json          @default("{}")
+}
+
+model User {
+    id          BigInt        @id
+    GuildMember GuildMember[]
+}
+
+model GuildMember {
+    guild   Guild  @relation(fields: [guildId], references: [id])
+    guildId BigInt
+    user    User   @relation(fields: [userId], references: [id])
+    userId  BigInt
+
+    @@id([guildId, userId])
+}
+
+model CommandResult {
+    id        Int    @id @default(autoincrement())
+    commandId String
+    executor  BigInt
+    result    Int
+}

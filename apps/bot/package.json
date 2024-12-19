@@ -1,0 +1,27 @@
+{
+  "name": "bot",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsnd --respawn --exit-child -- src/main.ts",
+    "build": "tsc",
+    "start": "node ./dist/main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@total-typescript/ts-reset": "^0.4.2",
+    "dotenv": "^16.3.0",
+    "eslint-config-custom": "*",
+    "ts-node-dev": "^2.0.0",
+    "tsconfig": "*"
+  },
+  "dependencies": {
+    "boxen": "^7.1.0",
+    "chalk": "^4.1.2",
+    "discord.js": "^14.11.0",
+    "glob": "^10.3.0"
+  }
+}
